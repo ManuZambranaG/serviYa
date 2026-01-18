@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiYa | Optimización Premium para Clínicas</title>
+    <style>
+        :root {
+            /* Palette: Medical Premium (Trust, Cleanliness, Technology) */
+            --primary: #005F73; /* Deep Teal - Professionalism */
+            --secondary: #0A9396; /* Lighter Teal - Healing/Calm */
+            --accent: #EE9B00; /* Gold/Orange - Action (Subtle) */
+            --light: #F8F9FA; /* Medical White */
+            --dark: #212529; /* Text */
+            --text-gray: #6C757D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,95,115,0.2);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* The "Pain" Section (Money Loss) */
+        .reality-check {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #ae2012; /* Red for alert/pain */
+            font-weight: bold;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .pain-card {
+            background: #fff;
+            padding: 30px;
+            border-left: 4px solid #ae2012; /* Red border indicating loss */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pain-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .pain-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 0;
+        }
+
+        .stat-highlight {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ae2012;
+            margin-bottom: 10px;
+        }
+
+        /* Solution Section (ServiYa) */
+        .solution {
+            padding: 80px 0;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .solution h2 {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #94d2bd;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .btn { width: 100%; display: block; margin: 10px 0; }
+            .btn-outline { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Servi<span>Ya</span></div>
+                <div>
+                    <a href="#contacto" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Agendar Demo</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Transforme su Clínica en una<br>Máquina de Eficiencia</h1>
+            <p>Deje de perder pacientes por falta de respuesta inmediata. Automatice citas, elimine el ausentismo y asegure sus ingresos antes de la consulta.</p>
+            <div style="margin-top: 30px;">
+                <a href="#contacto" class="btn">Optimizar mi Clínica</a>
+                <a href="#realidad" class="btn btn-outline">Ver cómo funciona</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="realidad" class="reality-check">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Cuánto dinero dejó de ganar este mes?</h2>
+                <p>La ineficiencia operativa es el "costo oculto" más alto en la medicina privada.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="pain-card">
+                    <span class="stat-highlight">30%</span>
+                    <h3>Ausentismo Crónico</h3>
+                    <p>Una silla vacía no es descanso, es <strong>dinero quemado</strong>. Si el paciente no llega y no pagó anticipo, usted pierde el tiempo del especialista, la renta del consultorio y la oportunidad de atender a otro.</p>
+                </div>
+
+                <div class="pain-card">
+                    <span class="stat-highlight">24/7</span>
+                    <h3>El Paciente "Ignorado"</h3>
+                    <p>El paciente busca salud fuera de horario de oficina. Si escriben a su WhatsApp y nadie responde en 5 minutos, <strong>buscan otra clínica</strong>. Su recepcionista duerme, su negocio no debería.</p>
+                </div>
+
+                <div class="pain-card">
+                    <span class="stat-highlight">$$$</span>
+                    <h3>Cobro Manual Inseguro</h3>
+                    <p>Perseguir pagos por transferencia o fiar la consulta genera fricción y pérdidas. Sin un sistema automático de anticipos, su agenda es solo una lista de deseos, no de ingresos asegurados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <h2>La Solución ServiYa</h2>
+            <p style="margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Implementamos tecnología de élite para que usted se dedique a curar, no a administrar.
+            </p>
+            <div class="solution-grid">
+                <div class="feature">
+                    <h3>Atención IA por WhatsApp</h3>
+                    <p>Respuestas inmediatas, cálidas y precisas a cualquier hora. Agendamiento automático sin intervención humana.</p>
+                </div>
+                <div class="feature">
+                    <h3>Cobros Automatizados</h3>
+                    <p>El paciente paga su anticipo al reservar. Si no paga, la hora queda libre automáticamente. Cero riesgo.</p>
+                </div>
+                <div class="feature">
+                    <h3>Reducción de Ausentismo</h3>
+                    <p>Recordatorios inteligentes y compromiso de pago previo reducen las faltas hasta en un 30% desde el primer mes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="cta">
+        <div class="container">
+            <h2>Deje de perder dinero hoy mismo</h2>
+            <p>Agende una auditoría gratuita de 15 minutos. Le mostraremos exactamente dónde está perdiendo ingresos su clínica.</p>
+            <a href="#" class="btn">Quiero una Auditoría Gratis</a>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #6c757d;">Disponible para toda Latinoamérica.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ServiYa. Optimización para el Sector Salud.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
