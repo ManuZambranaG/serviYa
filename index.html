@@ -27,6 +27,7 @@
     </script>
 
     <style>
+        /* Animación de pulso para el botón flotante */
         .pulse-electric {
             animation: pulse-ring 2s infinite;
         }
@@ -34,10 +35,6 @@
             0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
             100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
-        }
-        /* Transición suave para el script del botón flotante */
-        #floating-cta {
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
     </style>
 </head>
@@ -51,41 +48,38 @@
     </header>
 
     <section class="relative h-screen min-h-[600px] flex items-center justify-center bg-navy text-white">
-        <img src="49908 (1).jpg" class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Fondo Clínica">
+        <img src="49908 (1).jpg" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Fondo Clínica ServiYa">
         
-        <div class="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/50 to-navy z-0"></div>
+        <div class="absolute inset-0 bg-navy/60 z-0"></div>
         
         <div class="relative z-10 text-center px-6 max-w-5xl mx-auto mt-16">
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
                 Dirige tu clínica en <span class="text-cyan">2026</span>,<br>no en 2016.
             </h1>
-            <p class="text-lg md:text-2xl font-light leading-relaxed text-gray-300 max-w-3xl mx-auto">
+            <p class="text-lg md:text-2xl font-light leading-relaxed text-gray-200 max-w-4xl mx-auto">
                 Automatización inteligente por WhatsApp que agenda citas, gestiona crisis y recupera pacientes. 
-                Sin Apps, sin fricción, <span class="font-semibold text-white italic">todo directo por WhatsApp.</span>
+                Sin Apps, sin fricción, <strong class="text-white italic">todo directo por WhatsApp.</strong>
             </p>
         </div>
     </section>
 
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-navy">¿Por qué las clínicas pierden dinero hoy?</h2>
-            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all">
                     <div class="text-cyan text-5xl mb-6">📉</div>
                     <h3 class="text-2xl font-bold mb-3 text-navy">Cero Ausentismo</h3>
-                    <p class="text-gray-600 leading-relaxed italic">"Recupere el 40% de sus ingresos perdidos por pacientes que agendan y no llegan."</p>
+                    <p class="text-gray-600 leading-relaxed">"Recupere el 40% de sus ingresos perdidos por pacientes que no llegan."</p>
                 </div>
-                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all">
                     <div class="text-cyan text-5xl mb-6">⚡</div>
                     <h3 class="text-2xl font-bold mb-3 text-navy">Atención Total</h3>
-                    <p class="text-gray-600 leading-relaxed italic">"Su recepcionista tiene límites humanos. Nuestra IA atiende y agenda a 50 pacientes en simultáneo."</p>
+                    <p class="text-gray-600 leading-relaxed">"Su recepcionista tiene límites. Nuestra IA atiende a 50 pacientes en simultáneo."</p>
                 </div>
-                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all">
                     <div class="text-cyan text-5xl mb-6">📱</div>
                     <h3 class="text-2xl font-bold mb-3 text-navy">Libertad Digital</h3>
-                    <p class="text-gray-600 leading-relaxed italic">"Si el sistema no vive donde vive el paciente (WhatsApp), el sistema no sirve. Cero curvas de aprendizaje."</p>
+                    <p class="text-gray-600 leading-relaxed">"Si el sistema no vive donde vive el paciente (WhatsApp), el sistema no sirve."</p>
                 </div>
             </div>
         </div>
@@ -96,20 +90,19 @@
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="md:w-1/2">
                     <div class="inline-block bg-cyan/20 text-cyan px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide mb-6">Exclusivo Plan PRO</div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-navy leading-tight">Gestión de Crisis<br>por Audio</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-navy leading-tight">Modo Emergencia</h2>
                     <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                        ¿Emergencia de último minuto? No necesita entrar a una computadora. Solo mande un audio desde su celular:
+                        ¿Emergencia de último minuto? Solo mande un audio:
                     </p>
                     <div class="bg-white p-6 rounded-2xl border-l-4 border-cyan shadow-md mb-8">
-                        <p class="font-mono text-cyan font-semibold text-lg">🎙️ "ServiYa, avisa que voy tarde 20 min"</p>
+                        <p class="font-mono text-cyan font-bold text-lg">🎙️ 'ServiYa, avisa que voy tarde 20 min'</p>
                     </div>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        El sistema reprograma y notifica al instante a todos los afectados. <strong class="text-navy">Usted solo preocúpese por su paciente.</strong>
+                        El sistema reprograma y notifica a todos los afectados. <strong class="text-navy">Usted solo preocúpese por su paciente.</strong>
                     </p>
                 </div>
-                <div class="md:w-1/2 relative">
-                    <div class="absolute inset-0 bg-cyan blur-[100px] opacity-20 rounded-full"></div>
-                    <img src="emergency-audio.png" alt="Control de crisis ServiYa" class="relative z-10 rounded-3xl shadow-2xl border border-white/50 w-full object-cover aspect-video bg-navy/10">
+                <div class="md:w-1/2">
+                    <img src="emergencia.png" alt="Onda de audio y Smartphone" class="rounded-3xl shadow-2xl w-full object-cover">
                 </div>
             </div>
         </div>
@@ -117,8 +110,7 @@
 
     <section class="py-24 bg-navy text-white">
         <div class="container mx-auto px-6 max-w-6xl text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Transparencia Radical</h2>
-            <p class="text-gray-400 mb-16 text-lg">Inversión clara. Resultados medibles desde el primer día.</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-16">Transparencia Radical</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
                 
@@ -127,97 +119,91 @@
                     <p class="text-sm text-gray-400 mb-6 min-h-[40px]">El estándar de oro para iniciar.</p>
                     <div class="text-5xl font-bold mb-8">$19<span class="text-xl font-normal text-gray-500">/mes</span></div>
                     <ul class="space-y-4 mb-8 text-gray-300 flex-grow">
-                        <li class="flex items-center gap-3"><span>✅</span> Agendamiento nativo por WhatsApp</li>
-                        <li class="flex items-center gap-3"><span>✅</span> Sincronización Google Calendar</li>
-                        <li class="flex items-center gap-3"><span>✅</span> Recordatorios automáticos (1-2h antes)</li>
+                        <li class="flex items-start gap-3"><span>✅</span> <span>Agendamiento</span></li>
+                        <li class="flex items-start gap-3"><span>✅</span> <span>Google Calendar</span></li>
+                        <li class="flex items-start gap-3"><span>✅</span> <span>Recordatorio al paciente 1 hora antes</span></li>
                     </ul>
+                    <a href="https://wa.me/59164393198?text=quiero%20el%20plan%20Essential" target="_blank" class="block w-full text-center py-4 border border-cyan text-cyan rounded-xl font-bold hover:bg-cyan hover:text-navy transition text-lg">Elegir Essential</a>
                 </div>
 
                 <div class="p-10 bg-white rounded-3xl border-4 border-cyan shadow-2xl transform md:-translate-y-4 flex flex-col text-left relative text-navy">
                     <div class="absolute top-0 right-8 bg-cyan text-white px-6 py-2 rounded-b-xl text-sm font-bold uppercase tracking-wider shadow-md">Popular</div>
                     <h4 class="text-2xl font-bold mb-2 text-cyan">PRO</h4>
-                    <p class="text-sm text-gray-500 mb-6 min-h-[40px]">El motor completo para la clínica moderna.</p>
+                    <p class="text-sm text-gray-500 mb-6 min-h-[40px]">El motor de la clínica.</p>
                     <div class="text-6xl font-extrabold mb-8">$39<span class="text-xl font-normal text-gray-400">/mes</span></div>
                     <ul class="space-y-4 mb-8 text-slate-700 font-medium flex-grow">
-                        <li class="flex items-start gap-3"><span class="text-xl">🚀</span> <span><b>Modo Emergencia por Audio (Comandos)</b></span></li>
+                        <li class="flex items-start gap-3"><span class="text-xl">🚀</span> <span><b>Audio-Comandos</b></span></li>
                         <li class="flex items-start gap-3"><span class="text-xl">🚀</span> <span>Reagendamiento automático por cancelaciones</span></li>
-                        <li class="flex items-start gap-3"><span class="text-xl">✅</span> <span>Lista de Espera Inteligente</span></li>
-                        <li class="flex items-start gap-3"><span class="text-xl">✅</span> <span>Recordatorios Dobles (24h y 2h antes)</span></li>
+                        <li class="flex items-start gap-3"><span class="text-xl">✅</span> <span>Lista de espera inteligente</span></li>
+                        <li class="flex items-start gap-3"><span class="text-xl">✅</span> <span>Doble recordatorio 24 y 1 horas antes</span></li>
                     </ul>
-                    <a href="https://wa.me/59164393198" target="_blank" class="block w-full text-center py-4 bg-navy text-white rounded-xl font-bold hover:bg-slate-800 transition shadow-lg text-lg">Elegir PRO</a>
+                    <a href="https://wa.me/59164393198?text=quiero%20el%20plan%20PRO" target="_blank" class="block w-full text-center py-4 bg-cyan text-white rounded-xl font-bold hover:bg-[#0494ad] transition shadow-lg text-lg">Elegir PRO</a>
                 </div>
 
                 <div class="p-8 bg-slate-900 rounded-3xl border border-slate-800 flex flex-col text-left">
                     <h4 class="text-2xl font-bold mb-2 text-gray-400">Ultimate</h4>
                     <p class="text-sm text-gray-500 mb-6 min-h-[40px]">Para instituciones de élite.</p>
-                    <div class="text-4xl font-bold mb-8 italic text-white">Custom</div>
+                    <div class="text-4xl font-bold mb-8 italic text-white">Exclusivo</div>
                     <ul class="space-y-4 mb-8 text-gray-400 flex-grow">
-                        <li class="flex items-center gap-3"><span>👑</span> CRM Médico avanzado en Airtable</li>
-                        <li class="flex items-center gap-3"><span>👑</span> Atención basada en Historial Clínico</li>
-                        <li class="flex items-center gap-3"><span>✅</span> Fidelización (Cumpleaños y Ofertas)</li>
-                        <li class="flex items-center gap-3"><span>✅</span> Sistema Multi-Doctor completo</li>
+                        <li class="flex items-start gap-3"><span>👑</span> <span>Historial clínico integrado</span></li>
+                        <li class="flex items-start gap-3"><span>👑</span> <span>Seguimiento post-tratamiento</span></li>
+                        <li class="flex items-start gap-3"><span>✅</span> <span>Fidelización automatizada</span></li>
+                        <li class="flex items-start gap-3"><span>✅</span> <span>Facturación digital</span></li>
+                        <li class="flex items-start gap-3"><span>✅</span> <span>Digntado de la consulta por control de voz</span></li>
                     </ul>
-                    <a href="https://calendly.com/manuzambrana23/30min" target="_blank" class="block w-full text-center py-4 border border-slate-600 text-gray-300 rounded-xl font-bold hover:bg-slate-800 transition">Contactar Ventas VIP</a>
+                    <a href="https://wa.me/59164393198?text=quiero%20el%20plan%20ULTIMATE" target="_blank" class="block w-full text-center py-4 border border-slate-600 text-gray-300 rounded-xl font-bold hover:bg-slate-800 transition text-lg">Elegir Ultimate</a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="container mx-auto px-6 max-w-6xl">
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
             <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/3 flex justify-center">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-cyan rounded-full translate-x-4 translate-y-4 opacity-20"></div>
-                        <img src="manuel-zambrana.jpg" alt="Manuel Zambrana CEO" class="relative rounded-full w-72 h-72 object-cover shadow-2xl border-4 border-white bg-slate-100">
-                    </div>
+                
+                <div class="md:w-5/12 flex flex-col items-center">
+                    <img src="foto-manuel.jpg" alt="Manuel Zambrana" class="rounded-full w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover shadow-2xl mb-8">
+                    
+                    <a href="https://calendly.com/manuzambrana23/30min" target="_blank" class="w-full text-center px-6 py-4 border-2 border-navy text-navy font-bold rounded-xl hover:bg-navy hover:text-white transition-all duration-300 shadow-md">
+                        🤝 Agende una reunion con nuestro CEO
+                    </a>
                 </div>
-                <div class="md:w-2/3">
-                    <h3 class="text-cyan uppercase tracking-widest text-sm font-bold mb-4">Nuestro Propósito</h3>
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-navy italic leading-snug">
-                        "El talento de un médico es demasiado valioso para desperdiciarlo en tareas administrativas."
-                    </h2>
-                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed border-l-4 border-cyan pl-6">
-                        <p><strong class="text-navy">Por qué:</strong> Creemos que la salud prospera cuando el médico puede enfocarse 100% en su paciente, no en pelear con su agenda.</p>
-                        <p><strong class="text-navy">Cómo:</strong> Humanizamos la tecnología para que la gestión de su clínica sea invisible, natural y autónoma.</p>
-                        <p><strong class="text-navy">Qué:</strong> Desarrollamos ServiYa. El primer asistente de IA que devuelve al médico el control de su tiempo a través del canal más usado: WhatsApp.</p>
+
+                <div class="md:w-7/12">
+                    <div class="space-y-8 text-xl text-gray-800 leading-relaxed">
+                        <p class="font-bold text-navy text-2xl">
+                            "Creemos que el talento de un médico es demasiado valioso para desperdiciarlo en tareas administrativas."
+                        </p>
+                        <p>
+                            "Humanizamos la tecnología para que la gestión de su clínica sea invisible, natural y eficiente."
+                        </p>
+                        <p class="italic text-cyan font-semibold">
+                            "ServiYa: El primer asistente autónomo que devuelve al médico el control de su tiempo."
+                        </p>
                         <p class="font-bold text-navy pt-4">— Manuel Zambrana, CEO de ServiYa</p>
                     </div>
-                    
-                    <div class="mt-10">
-                        <a href="https://calendly.com/manuzambrana23/30min" target="_blank" class="inline-flex items-center justify-center px-8 py-4 border-2 border-navy text-navy font-bold rounded-xl hover:bg-navy hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg">
-                            🤝 Agendar Videollamada con el CEO
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 py-12 text-center text-gray-500 border-t border-white/5">
-        <p class="font-light tracking-wide">&copy; 2026 ServiYa AI. Todos los derechos reservados. <br> Tecnología de automatización líder en Latinoamérica.</p>
+    <footer class="bg-slate-900 py-8 text-center text-gray-500 border-t border-white/5">
+        <p class="font-light tracking-wide">&copy; 2026 ServiYa. Todos los derechos reservados.<br> Tecnología de automatización sin salir de WhatsApp.</p>
     </footer>
 
-    <a href="https://wa.me/59164393198" target="_blank" id="floating-cta" class="pulse-electric fixed bottom-8 right-8 z-[60] bg-electric text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-3 font-bold text-lg opacity-0 translate-y-10 pointer-events-none">
+    <a href="https://wa.me/59164393198" target="_blank" id="floating-cta" class="pulse-electric fixed bottom-8 right-8 z-[60] bg-electric text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-3 font-bold text-lg opacity-0 transition-opacity duration-1000 ease-in-out">
         <span class="text-2xl">📅</span> Probar Demo en Vivo
     </a>
 
     <script>
-        // Lógica para mostrar/ocultar el botón flotante al hacer scroll
+        // Lógica JS: Asegura que el botón esté siempre visible, entrando suavemente al cargar la página.
         document.addEventListener("DOMContentLoaded", function() {
             const floatBtn = document.getElementById("floating-cta");
-            
-            window.addEventListener("scroll", function() {
-                // Si el usuario baja más de 300px, muestra el botón
-                if (window.scrollY > 300) {
-                    floatBtn.classList.remove("opacity-0", "translate-y-10", "pointer-events-none");
-                    floatBtn.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
-                } else {
-                    floatBtn.classList.add("opacity-0", "translate-y-10", "pointer-events-none");
-                    floatBtn.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
-                }
-            });
+            setTimeout(() => {
+                floatBtn.classList.remove("opacity-0");
+                floatBtn.classList.add("opacity-100");
+            }, 500); // Aparece medio segundo después de cargar
         });
     </script>
 </body>
